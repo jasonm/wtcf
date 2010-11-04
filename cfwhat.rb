@@ -2,7 +2,7 @@ require 'rubygems'
 require 'mechanize'
 require 'highline/import'
 
-class CampfireWhat
+class CfWhat
   START_URL = "https://thoughtbot.campfirenow.com"
 
   attr_reader :results
@@ -75,7 +75,7 @@ if __FILE__ == $0
   password = ENV['CF_PASSWORD'] || ask("Enter your password (or export ENV['CF_PASSWORD']): (will be masked) " ) { |q| q.echo = "*" }
   term     = ENV['CF_TERM']     || ask("What term to search for? (or export ENV['CF_TERM']): " )
 
-  cfwhat = CampfireWhat.new(username, password, term)
+  cfwhat = CfWhat.new(username, password, term)
   cfwhat.search
   p cfwhat.results
 end
