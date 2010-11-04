@@ -9,7 +9,7 @@ class CampfireWhat
 
   def initialize(username, password, term)
     @username, @password, @term = username, password, term
-    @results = []
+    @results = {}
   end
 
   def search
@@ -63,6 +63,7 @@ class CampfireWhat
   def record(rooms, people, excerpts)
     # TODO use the other things for fun and profit
     people.each do |person|
+      
       @results[person] ||= 0
       @results[person] += 1
     end
@@ -78,4 +79,3 @@ if __FILE__ == $0
   cfwhat.search
   p cfwhat.results
 end
-

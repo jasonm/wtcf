@@ -7,6 +7,6 @@ end
 post '/' do
   term = params[:term]
 
-  @results = []
+  @results = "search for #{term}"
   erb :results
 end
