@@ -1,0 +1,3 @@
+I wrote this in like an hour or something, I think it's still hardcoded to thoughtbot.campfirenow.com and what is that link to shorty, I think I just ripped some stuff off from croaky's bitly-like app.
+
+This is hacks, probably you should never download it.
