@@ -3,15 +3,16 @@
   <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-type' />
     <title>
-      CF What?
+      What the <%= @term %>?
     </title>
     <link href='style.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <div class='content'>
-      <h1>Results</h1>
-      <%= @results.inspect %>
-
+      <h1>What the <em><%= @term %></em>?</h1>
+      <% @results.sort_by { |who, how_many| -how_many }.each do |who, how_many| %>
+        <%= who %>: <%= how_many %> mentions<br/>
+      <% end %>
     </div>
   </body>
 </html>
